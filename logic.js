@@ -1,18 +1,18 @@
 //generate array
 $("#array-search").on("click", function () {
-    generateTopics($(this).attr("data-animal")); 
+    generateTopics($(this)); 
 });
 //add animal button
 $(".search").on("click", function () {
   if ($(".form-control").val() !== ""){    // fixed random button generating when its empty parameters
-    renderButtons($(this).attr("data-animal"));
+    renderButtons($(this));
   }
 });
 //
 $(document).on("click", ".animal-btn", function () {
   getGiphy($(this).attr("data-animal"));
 });
-////condition for on click event
+////condition for on click event for images
 $(document).on("click", ".image-class", function () {
   var state = $(this).attr("data-state"); 
   if (state === "still") {
